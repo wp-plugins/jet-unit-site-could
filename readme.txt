@@ -22,7 +22,6 @@ ru: "Облако" групп и пользователей Вашей соци�
 
 !!! For Buddypress 1.1.x, 1.2.1,2,3,4 : <a href="http://wordpress.org/extend/plugins/jet-group-could/">Jet Groups Could</a> and <a href="http://wordpress.org/extend/plugins/jet-member-could/">Jet Members Could</a>
 
-
 == Installation ==
 
 1. Upload `jet-site-unit-could.php` to the `/wp-content/plugins/` directory
@@ -45,6 +44,8 @@ For suggestions, bugs, hugs and love can be donated at the following locations.
 
 
 == Changelog ==
+= 1.1 =
+* Small changes in code. Upgrading is not compulsory
 
 = 1.0 =
 * First Release.
