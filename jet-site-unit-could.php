@@ -8,7 +8,7 @@ Plugin URI: http://milordk.ru/r-lichnoe/opyt-l/cms/prodolzhaem-widget-o-stroenie
 Donate URI: http://milordk.ru/uslugi.html
 Description: ru-Вывод случайных пользователей и/или групп в виде аватар. en-Provides random avatart members and/or groups.
 Tags: BuddyPress, Wordpress, MU, meta, members, widget, groups
-Version: 1.1
+Version: 1.1.5
 */
 ?>
 <?php
@@ -82,6 +82,7 @@ class JetSUC_Members extends WP_Widget {
 		$mtitle = strip_tags( $instance['mtitle']); 
 		$mnumber = strip_tags( $instance['mnumber']);
 		$mavatarsize = strip_tags( $instance['mavatarsize']);
+		$mindexkey = strip_tags($instance['mindexkey']);		
 		$mjmtitle = strip_tags( $instance['mjmtitle']); ?>
 		<p><label for="<?php echo $this->get_field_id('mtitle'); ?>"><?php _e('Title:', 'buddypress'); ?>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name( 'mtitle' ); ?>" type="text" value="<?php echo attribute_escape( stripslashes( $mtitle ) ); ?>" /></label></p>
@@ -108,6 +109,8 @@ class JetSUC_Members extends WP_Widget {
 <?php
 	}
 }
+
+
 
 class JetSUC_Groups extends WP_Widget {
 	function JetSUC_Groups() {
@@ -172,6 +175,7 @@ class JetSUC_Groups extends WP_Widget {
 		$title = strip_tags( $instance['title']); 
 		$number = strip_tags( $instance['number']);
 		$avatarsize = strip_tags( $instance['avatarsize']);
+		$indexkey = strip_tags($instance['indexkey']);		
 		$jgtitle = strip_tags( $instance['jgtitle']); ?>
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'buddypress'); ?>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo attribute_escape( stripslashes( $title ) ); ?>" /></label></p>

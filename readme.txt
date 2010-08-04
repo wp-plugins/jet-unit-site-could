@@ -3,11 +3,11 @@ Contributors: Jettochkin
 Donate link: http://milordk.ru/uslugi.html
 Plugin link: http://milordk.ru/r-lichnoe/opyt/cms/jet-site-unit-could-poleznye-vidzhety-dlya-vashej-socialnoj-seti.html
 Tags: BuddyPress, Wordpress, MU, meta, members, widget, groups, seo
-Requires at least: WP MU 3.0, BuddyPress 1.2.5.2
-Tested up to: Wordpress 3.0, BuddyPress 1.2.5.2
+Requires at least: Wordpress MU 3.0, BuddyPress 1.2.5.2
+Tested up to: Wordpress 3.0.1, BuddyPress 1.2.5.2
 Stable tag: trunk
 
-Provides random members and/or groups avatar list with more options
+Provides random members and/or groups avatar list with more options /Widget/
 
 == Description ==
 
@@ -44,6 +44,10 @@ For suggestions, bugs, hugs and love can be donated at the following locations.
 
 
 == Changelog ==
+
+= 1.1.5 =
+* Fix for Widget: not save options "Set on the members could and noindex nofollow on links?"
+
 = 1.1 =
 * Small changes in code. Upgrading is not compulsory
 
