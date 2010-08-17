@@ -7,7 +7,7 @@ Requires at least: Wordpress MU 3.0, BuddyPress 1.2.5.2
 Tested up to: Wordpress 3.0.1, BuddyPress 1.2.5.2
 Stable tag: trunk
 
-Provides random members and/or groups avatar list with more options /Widget/
+Provides random members and/or groups avatar list + blog list with more options /Widget/
 
 == Description ==
 
@@ -15,9 +15,9 @@ en: "Cloud" groups and users of your social network with highly customizable dis
 You have a lot of communities? Want to show users a maximum of groups? Install this widget!
 
 ru: "Облако" групп и пользователей Вашей социальной сети с широкими возможностями настройки отображения
-У Вас множество групп и/или пользователей? Хотите показать пользователям максимум групп? Установить этот виджет! 
+У Вас множество групп и/или пользователей? Множество блогов (сообществ)? Хотите показать пользователям максимум групп и/или блогов? Установить этот виджет! 
 
-<a href="http://sportactions.ru">Live demo 1: Sportactions site</a> and <a href="http://volks-wagen-club.ru">Live demo 2: VW Club site</a>
+Live demo: <a href="http://sportactions.ru">Sportactions site</a>, <a href="http://volks-wagen-club.ru">VW Club site</a>, <a href="http://jes.milordk.ru">JES DEV site</a>
 
 
 !!! For Buddypress 1.1.x, 1.2.1,2,3,4 : <a href="http://wordpress.org/extend/plugins/jet-group-could/">Jet Groups Could</a> and <a href="http://wordpress.org/extend/plugins/jet-member-could/">Jet Members Could</a>
@@ -44,6 +44,10 @@ For suggestions, bugs, hugs and love can be donated at the following locations.
 
 
 == Changelog ==
+
+= 1.2 =
+* Added functional plug-Jet Blog Meta List (http://wordpress.org/extend/plugins/jet-blog-meta-list-2-ru-edition/)
+* Cleaned up code
 
 = 1.1.5 =
 * Fix for Widget: not save options "Set on the members could and noindex nofollow on links?"
