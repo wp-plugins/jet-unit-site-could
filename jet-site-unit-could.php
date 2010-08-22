@@ -8,7 +8,7 @@ Plugin URI: http://milordk.ru/r-lichnoe/opyt/cms/jet-site-unit-could-poleznye-vi
 Donate URI: http://milordk.ru/uslugi.html
 Description: ru-Вывод случайных пользователей и/или групп в виде аватар + вывод списка блогов. en-Provides random avatart members and/or groups + blog list.
 Tags: BuddyPress, Wordpress, MU, meta, members, widget, groups, blog, tag
-Version: 2.0
+Version: 2.0.1
 */
 ?>
 <?php
@@ -245,9 +245,9 @@ function jet_get_blog_could( $start = 0, $num = 10, $deprecated = '', $jincount 
 	}
 }
 
-class BlogCould extends WP_Widget {
-	function BlogCould() {
-		parent::WP_Widget(false, $name = __('Jet SUC Blog','BlogCould') );
+class JetSUC_Blogs extends WP_Widget {
+	function JetSUC_Blogs() {
+		parent::WP_Widget(false, $name = __('Jet SUC Blog','JetSUC_Blogs') );
 	}
 
 	function widget($args, $instance) {
@@ -260,7 +260,7 @@ class BlogCould extends WP_Widget {
 		$jincount = isset($instance['jincount']) ? $instance['jincount']: false;  
         	?>
 		<p align="center"> 
-		<span><a href="http://milordk.ru/r-lichnoe/opyt-l/cms/jet-blog-meta-list.html" title="Jet Blog Meta List"><? echo '&diams; ';?></a></span>
+		<span><a href="http://milordk.ru/r-lichnoe/opyt/cms/jet-site-unit-could-poleznye-vidzhety-dlya-vashej-socialnoj-seti.html" title="Jet Site Unit Could"><? echo '&diams; ';?></a></span>
 		<? foreach ($blog_list AS $blog) { ?>
 			<? $nummeta++;
 			$blog_details = get_blog_details($blog['blog_id']);
@@ -319,7 +319,7 @@ class BlogCould extends WP_Widget {
 }
 
 // Add WP widget action
-add_action('widgets_init', create_function('', 'return register_widget("BlogCould");'));
+add_action('widgets_init', create_function('', 'return register_widget("JetSUC_Blogs");'));
 add_action('widgets_init', create_function('', 'return register_widget("JetSUC_Members");'));
 add_action('widgets_init', create_function('', 'return register_widget("JetSUC_Groups");'));
 ?>
