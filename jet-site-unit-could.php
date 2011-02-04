@@ -27,7 +27,7 @@ class JetSUC_Members extends WP_Widget {
 		$mkeytitle = $instance['mjmtitle'];
 		$mavatarsize = $instance['mavatarsize'];
 		$mindexkey = $instance['mindexkey']; ?>
-
+	<!-- Milordk Dev http://milordk.ru -->
 		<?php echo $before_title; ?>
 	<?php if ( $mkeytitle ) { ?>
 <a href="<?php echo get_option('home') ?>/<?php echo BP_MEMBERS_SLUG ?>" title="<?php _e( 'Members', 'buddypress' ); ?>">
@@ -128,6 +128,7 @@ class JetSUC_Groups extends WP_Widget {
 		$keytitle = $instance['jgtitle'];
 		$avatarsize = $instance['avatarsize'];
 		$indexkey = $instance['indexkey']; ?>		
+		<!-- Milordk Dev http://milordk.ru -->
 		<?php echo $before_title; ?>
 <?php if ( $keytitle ) { ?>
 <a href="<?php echo get_option('home') ?>/<?php echo BP_GROUPS_SLUG ?>" title="<?php _e( 'Groups', 'buddypress' ) ?>">
@@ -263,8 +264,9 @@ class JetSUC_Blogs extends WP_Widget {
 
 	function widget($args, $instance) {
 		extract( $args );
-		echo $before_widget;
-		echo $before_title . $instance['title'] . $after_title;
+		echo $before_widget; ?>
+		<!-- Milordk Dev http://milordk.ru -->
+		<?php echo $before_title . $instance['title'] . $after_title;
 		$blog_list = jet_get_blog_could(1, $instance['number'], true, $instance['jincount']);
 		$nummeta=0;
 		$emstart=1;
