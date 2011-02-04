@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Jet Site Unit Could
+Plugin Name: Jet Site Unit Could Widgets
 URI: http://milordk.ru
 Author: Jettochkin
 Author URI: http://milordk.ru

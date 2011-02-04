@@ -1,4 +1,4 @@
-=== Jet Site Unit Could ===
+=== Jet Site Unit Could Widgets ===
 Contributors: Jettochkin
 Donate link: http://milordk.ru/uslugi.html
 Plugin link: http://milordk.ru/r-lichnoe/opyt/cms/jet-site-unit-could-poleznye-vidzhety-dlya-vashej-socialnoj-seti.html
