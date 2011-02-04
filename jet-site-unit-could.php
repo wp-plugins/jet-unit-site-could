@@ -5,10 +5,10 @@ URI: http://milordk.ru
 Author: Jettochkin
 Author URI: http://milordk.ru
 Plugin URI: http://milordk.ru/r-lichnoe/opyt/cms/jet-site-unit-could-poleznye-vidzhety-dlya-vashej-socialnoj-seti.html
-Donate URI: http://milordk.ru/uslugi.html
+Donate URI: http://milordk.ru/projects/wordpress-buddypress/podderzhka.html
 Description: ru-Вывод случайных пользователей и/или групп в виде аватар + вывод списка блогов. en-Provides random avatart members and/or groups + blog list.
 Tags: BuddyPress, Wordpress, MU, meta, members, widget, groups, blog, tag
-Version: 2.0.1
+Version: 2.1
 */
 ?>
 <?php
@@ -43,13 +43,13 @@ class JetSUC_Members extends WP_Widget {
 		 ?>
 			<?php if ( bp_has_members( $argj ) ) : ?>
 			<?php if ($mindexkey) { ?>
-			<noindex>
+			<!-- <noindex> -->
 			<?php } ?>
 					<?php while ( bp_members() ) : bp_the_member(); ?>
 							<a href="<?php bp_member_link() ?>" title="<?php _e('Member','buddypress'); ?>: <?php bp_member_name() ?>" <?php if ($indexkey) { ?>rel="nofollow"<?php } ?>><?php bp_member_avatar('type=thumb&width='.$mavatarsize.'&height='.$mavatarsize) ?></a>
 					<?php endwhile; ?>	
 			<?php if ($mindexkey) { ?>
-			</noindex>
+			<!-- </noindex> -->
 			<?php } ?>
 			<br />
 				<?php do_action( 'bp_directory_members_featured' ) ?>	
@@ -61,9 +61,9 @@ class JetSUC_Members extends WP_Widget {
 				</div>
 
 			<?php endif; ?>
-
 <?
 		echo $after_widget; ?>
+		<div style="clear:both;"><span></span></div>
 <?php	}
 
 	function update($new_instance, $old_instance) {
@@ -105,6 +105,11 @@ class JetSUC_Members extends WP_Widget {
                 echo 'Set on the members could and noindex nofollow on links?';
         } ?>&nbsp;
 		<input class="checkbox" type="checkbox" <?php if ($mindexkey) {echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('mindexkey'); ?>" name="<?php echo $this->get_field_name('mindexkey'); ?>" value="1" /></p>
+	<p><?php if (WPLANG == 'ru_RU' or WPLANG == 'ru_RU_lite' ) { ?>
+			Обратите внимание на другие плагины на <a href="http://milordk.ru/projects/wordpress-buddypress.html" title="Wordpress BuddyPress Dev">сайте разработчика</a>
+			<?php } else { ?>
+			Pay attention to the other plugins on the <a href="http://milordk.ru/projects/wordpress-buddypress.html" title="Wordpress BuddyPress Dev">site developer</a> 
+			<?php } ?></p>
 <?php
 	}
 }
@@ -136,13 +141,13 @@ class JetSUC_Groups extends WP_Widget {
 
 			<?php if ( bp_has_groups( $argj ) ) : ?>
 			<?php if ($indexkey) { ?>
-			<noindex>
+			<!-- <noindex> -->
 			<?php } ?>
 					<?php while ( bp_groups() ) : bp_the_group(); ?>
 								<a href="<?php bp_group_permalink() ?>" title="<?php bp_group_name() ?> | <?php bp_group_last_active() ?> | <?php bp_group_member_count(); ?>"<?php if ($indexkey) { ?> rel="nofollow"<?php } ?>><?php bp_group_avatar('type=thumb&width='.$avatarsize.'&height='.$avatarsize) ?></a>
 					<?php endwhile; ?>	
 			<?php if ($indexkey) { ?>
-			</noindex>
+			<!-- </noindex> -->
 			<?php } ?>				
 				<?php do_action( 'bp_directory_groups_featured' ) ?>	
 				
@@ -154,6 +159,7 @@ class JetSUC_Groups extends WP_Widget {
 			<?php endif; ?>
 
 <?	echo $after_widget; ?>
+		<div style="clear:both;"><span></span></div>
 <?php	}
 
 	function update($new_instance, $old_instance) {
@@ -195,6 +201,11 @@ class JetSUC_Groups extends WP_Widget {
                 echo 'Set on the groups could and noindex nofollow on links?';
         } ?>&nbsp;
 		<input class="checkbox" type="checkbox" <?php if ($indexkey) {echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('indexkey'); ?>" name="<?php echo $this->get_field_name('indexkey'); ?>" value="1" /></p>		
+	<p><?php if (WPLANG == 'ru_RU' or WPLANG == 'ru_RU_lite' ) { ?>
+			Обратите внимание на другие плагины на <a href="http://milordk.ru/projects/wordpress-buddypress.html" title="Wordpress BuddyPress Dev">сайте разработчика</a>
+			<?php } else { ?>
+			Pay attention to the other plugins on the <a href="http://milordk.ru/projects/wordpress-buddypress.html" title="Wordpress BuddyPress Dev">site developer</a> 
+			<?php } ?></p>
 <?php
 	}
 }
@@ -287,8 +298,9 @@ class JetSUC_Blogs extends WP_Widget {
 			}
 		} ?>
 		</p>
-		<? echo $after_widget;
-	}
+		<? echo $after_widget; ?>
+		<div style="clear:both;"><span></span></div>
+<?php	}
 
 	function update($new_instance, $old_instance) {
 		$instance = $old_instance;
@@ -314,6 +326,11 @@ class JetSUC_Blogs extends WP_Widget {
 		if (WPLANG == 'ru_RU' or WPLANG == 'ru_RU_lite' ) { echo 'Учитывать количество записей блога:'; } else { echo 'Dependence on post count:'; }
 		?></p>
                 <p><input class="checkbox" type="checkbox" <?php if ($jincount) {echo '"checked"';} ?> id="<? echo $this->get_field_id('jincount'); ?>" name="<? echo $this->get_field_name('jincount'); ?>" value="1" /></p>
+	<p><?php if (WPLANG == 'ru_RU' or WPLANG == 'ru_RU_lite' ) { ?>
+			Обратите внимание на другие плагины на <a href="http://milordk.ru/projects/wordpress-buddypress.html" title="Wordpress BuddyPress Dev">сайте разработчика</a>
+			<?php } else { ?>
+			Pay attention to the other plugins on the <a href="http://milordk.ru/projects/wordpress-buddypress.html" title="Wordpress BuddyPress Dev">site developer</a> 
+			<?php } ?></p>
 	<?php
 	}
 }

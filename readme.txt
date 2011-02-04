@@ -4,7 +4,7 @@ Donate link: http://milordk.ru/uslugi.html
 Plugin link: http://milordk.ru/r-lichnoe/opyt/cms/jet-site-unit-could-poleznye-vidzhety-dlya-vashej-socialnoj-seti.html
 Tags: BuddyPress, Wordpress, MU, meta, members, widget, groups, seo
 Requires at least: Wordpress MU 3.0, BuddyPress 1.2.5.2
-Tested up to: Wordpress 3.0.1, BuddyPress 1.2.5.2
+Tested up to: Wordpress 3.0.4, BuddyPress 1.2.5.2
 Stable tag: trunk
 
 Provides random members and/or groups avatar list + blog list with more options /Widget/
@@ -44,6 +44,9 @@ For suggestions, bugs, hugs and love can be donated at the following locations.
 
 
 == Changelog ==
+
+= 2.1 =
+* Update code
 
 = 1.2 =
 * Added functional plug-Jet Blog Meta List (http://wordpress.org/extend/plugins/jet-blog-meta-list-2-ru-edition/)
